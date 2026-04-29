@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orações Diárias — Receba uma oração personalizada no WhatsApp 🙏</title>
+<meta name="description" content="Fortaleça sua fé todos os dias com orações personalizadas inspiradas em Nossa Senhora e Jesus, entregues direto no seu WhatsApp. 7 dias grátis.">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Orações Diárias — Oração diária no seu WhatsApp">
+<meta property="og:description" content="Receba uma oração personalizada todos os dias, direto no WhatsApp. Sem compromisso. 7 dias grátis.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f59e0b">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+  :root {
+    --gold: #f59e0b;
+    --gold-dark: #d97706;
+    --gold-deeper: #92400e;
+    --cream: #fffbeb;
+    --warm: #fef3c7;
+  }
+  * { -webkit-tap-highlight-color: transparent; }
+  body { font-family: 'Inter', sans-serif; background: #fffdf7; color: #1c1917; }
+  .playfair { font-family: 'Playfair Display', serif; }
+
+  /* CTA Button */
+  .btn-cta {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+    color: white; font-weight: 700; font-size: 17px; letter-spacing: -.2px;
+    padding: 18px 32px; border-radius: 100px; width: 100%; max-width: 400px;
+    border: none; cursor: pointer; text-decoration: none;
+    box-shadow: 0 8px 30px rgba(37,211,102,.35);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(37,211,102,.45); }
+  .btn-cta:active { transform: translateY(0); }
+
+  .btn-cta-gold {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white; font-weight: 700; font-size: 16px;
+    padding: 16px 28px; border-radius: 100px; width: 100%;
+    border: none; cursor: pointer; text-decoration: none;
+    box-shadow: 0 6px 24px rgba(245,158,11,.35);
+    transition: transform .2s, box-shadow .2s;
+  }
+  .btn-cta-gold:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(245,158,11,.45); }
+
+  /* Pulse animation on CTA */
+  @keyframes pulse-ring {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,.5); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+  }
+  .pulse { animation: pulse-ring 2.2s ease infinite; }
+
+  /* Glow text */
+  .text-gold { color: #d97706; }
+  .text-gold-light { color: #f59e0b; }
+
+  /* Section divider */
+  .divider { width: 48px; height: 3px; background: linear-gradient(90deg,#f59e0b,#d97706); border-radius: 2px; margin: 0 auto 20px; }
+
+  /* Card hover */
+  .plan-card { transition: transform .25s, box-shadow .25s; }
+  .plan-card:hover { transform: translateY(-4px); }
+
+  /* Floating badge */
+  @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+  .float { animation: float 3s ease-in-out infinite; }
+
+  /* FAQ accordion */
+  .faq-item summary { list-style: none; cursor: pointer; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+
+  /* Subtle gradient overlays */
+  .hero-grad { background: linear-gradient(180deg, #fffbeb 0%, #fef9ee 60%, #fff 100%); }
+  .section-warm { background: linear-gradient(180deg, #fffbeb 0%, #fff8e7 100%); }
+
+  /* Stars */
+  .stars { color: #f59e0b; letter-spacing: 1px; }
+
+  /* Online dot */
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.4} }
+  .online-dot { animation: blink 2s ease infinite; }
+
+  /* Scroll fade-in */
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* WhatsApp icon inline */
+  .wa-icon { width: 22px; height: 22px; fill: white; flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════
+     STICKY TOP BAR
+═════════════════════════════════════════════════ -->
+<div class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-amber-100 shadow-sm">
+  <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="flex items-center gap-2.5">
+      <div class="w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center shadow">
+        <!-- mini cross -->
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="white">
+          <rect x="7" y="1" width="2" height="14" rx="1"/>
+          <rect x="1" y="5.5" width="14" height="2" rx="1"/>
+        </svg>
+      </div>
+      <span class="font-bold text-slate-800 text-sm">Orações Diárias</span>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center gap-1.5 text-xs text-emerald-600 font-medium">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 online-dot"></span>
+        <span id="online-count">847</span> online agora
+      </div>
+      <a href="https://wa.me/5513982290879?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis" target="_blank"
+         class="bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:shadow-md transition-all hover:-translate-y-0.5">
+        Começar grátis 🙏
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════
+     HERO
+═════════════════════════════════════════════════ -->
+<section class="hero-grad pt-12 pb-16 px-4">
+  <div class="max-w-2xl mx-auto text-center">
+
+    <!-- Badge topo -->
+    <div class="inline-flex items-center gap-2 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold px-4 py-2 rounded-full mb-8 float">
+      ✨ Mais de 1.000 pessoas recebendo orações diariamente
+    </div>
+
+    <!-- Headline -->
+    <h1 class="playfair text-4xl sm:text-5xl font-bold text-slate-900 leading-tight mb-5">
+      Receba uma <span class="text-gold">oração diária</span><br>
+      personalizada no seu<br>
+      <span class="relative inline-block">
+        WhatsApp 🙏
+        <svg class="absolute -bottom-1 left-0 w-full" height="6" viewBox="0 0 200 6" preserveAspectRatio="none">
+          <path d="M0 5 Q100 0 200 5" stroke="#f59e0b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </span>
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="text-lg sm:text-xl text-slate-600 leading-relaxed mb-8 max-w-lg mx-auto">
+      Fortaleça sua fé todos os dias com mensagens inspiradas em
+      <strong class="text-slate-700">Nossa Senhora e Jesus</strong>,
+      entregues diretamente no seu WhatsApp.
+    </p>
+
+    <!-- CTA principal -->
+    <div class="flex flex-col items-center gap-3 mb-6">
+      <a href="https://wa.me/5513982290879?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
+         target="_blank" class="btn-cta pulse">
+        <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Começar 7 dias grátis no WhatsApp
+      </a>
+      <p class="text-sm text-slate-400 flex items-center gap-2">
+        <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Sem compromisso &nbsp;•&nbsp; Cancelamento fácil &nbsp;•&nbsp; Sem cartão
+      </p>
+    </div>
+
+    <!-- Hero visual -->
+    <div class="relative max-w-xs mx-auto mt-10">
+      <!-- Glowing circle de fundo -->
+      <div class="absolute inset-0 rounded-full bg-amber-200/40 blur-3xl scale-110"></div>
+      <!-- Ícone central espiritual -->
+      <div class="relative bg-gradient-to-b from-amber-50 to-white rounded-3xl border border-amber-100 shadow-xl p-8 mx-auto">
+        <!-- Cruz luminosa -->
+        <div class="flex justify-center mb-4">
+          <div class="relative">
+            <div class="w-20 h-20 rounded-3xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-300/50">
+              <svg width="38" height="38" viewBox="0 0 38 38" fill="white">
+                <rect x="16" y="3" width="6" height="32" rx="3"/>
+                <rect x="3" y="13" width="32" height="6" rx="3"/>
+              </svg>
+            </div>
+            <!-- Raios de luz -->
+            <div class="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-amber-300/60 blur-sm"></div>
+            <div class="absolute -bottom-1 -left-2 w-4 h-4 rounded-full bg-amber-200/60 blur-sm"></div>
+          </div>
+        </div>
+        <!-- Mock mensagem WA -->
+        <div class="bg-emerald-500 rounded-2xl rounded-tl-sm p-3 text-left text-white shadow-md mb-2">
+          <p class="text-xs font-semibold mb-1 opacity-80">Orações Diárias 🙏</p>
+          <p class="text-sm leading-snug">"Senhor, que neste dia eu caminhe na Tua luz e sinta a presença de Maria guiando meus passos... Amém. 🙏"</p>
+          <p class="text-xs opacity-60 mt-1.5 text-right">06:00 ✓✓</p>
+        </div>
+        <div class="flex justify-center gap-1 mt-3">
+          <div class="w-2 h-2 rounded-full bg-amber-400"></div>
+          <div class="w-2 h-2 rounded-full bg-amber-200"></div>
+          <div class="w-2 h-2 rounded-full bg-amber-200"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     SOCIAL PROOF BAR
+═════════════════════════════════════════════════ -->
+<div class="bg-gradient-to-r from-amber-600 to-amber-500 py-4 px-4">
+  <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-6 text-white text-sm font-medium">
+    <span class="flex items-center gap-2">⭐ 4.9/5 de avaliação</span>
+    <span class="flex items-center gap-2">🙏 +1.000 assinantes ativos</span>
+    <span class="flex items-center gap-2">📱 Funciona em qualquer celular</span>
+    <span class="flex items-center gap-2">✅ 7 dias completamente grátis</span>
+  </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════════
+     PROBLEMA
+═════════════════════════════════════════════════ -->
+<section class="py-20 px-4 bg-white fade-in">
+  <div class="max-w-2xl mx-auto text-center">
+    <div class="divider"></div>
+    <h2 class="playfair text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+      Você se sente sobrecarregado,<br>
+      <span class="text-gold">ansioso ou distante de Deus?</span>
+    </h2>
+    <p class="text-slate-500 text-lg mb-12">Você não está sozinho. Milhares de pessoas sentem o mesmo:</p>
+
+    <div class="grid sm:grid-cols-2 gap-4 text-left">
+      <div class="flex items-start gap-4 bg-red-50 rounded-2xl p-5 border border-red-100">
+        <span class="text-2xl mt-0.5">😔</span>
+        <div>
+          <p class="font-semibold text-slate-800 mb-1">Falta de tempo para orar</p>
+          <p class="text-sm text-slate-500">A vida agitada afasta do momento sagrado</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 bg-red-50 rounded-2xl p-5 border border-red-100">
+        <span class="text-2xl mt-0.5">🌪️</span>
+        <div>
+          <p class="font-semibold text-slate-800 mb-1">Mente cansada e preocupada</p>
+          <p class="text-sm text-slate-500">Ansiedade e pensamentos que não param</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 bg-red-50 rounded-2xl p-5 border border-red-100">
+        <span class="text-2xl mt-0.5">🧭</span>
+        <div>
+          <p class="font-semibold text-slate-800 mb-1">Busca por direção espiritual</p>
+          <p class="text-sm text-slate-500">Sem saber por onde começar a se reconectar</p>
+        </div>
+      </div>
+      <div class="flex items-start gap-4 bg-red-50 rounded-2xl p-5 border border-red-100">
+        <span class="text-2xl mt-0.5">💔</span>
+        <div>
+          <p class="font-semibold text-slate-800 mb-1">Precisa de paz no coração</p>
+          <p class="text-sm text-slate-500">Dores que parecem pesadas demais para carregar só</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     SOLUÇÃO
+═════════════════════════════════════════════════ -->
+<section class="section-warm py-20 px-4 fade-in">
+  <div class="max-w-2xl mx-auto text-center">
+    <div class="divider"></div>
+    <h2 class="playfair text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+      Nós cuidamos disso <span class="text-gold">para você</span>
+    </h2>
+    <p class="text-slate-600 text-lg leading-relaxed mb-12 max-w-xl mx-auto">
+      Todos os dias você recebe uma <strong>oração única, personalizada para a sua vida</strong>,
+      inspirada em Nossa Senhora e Jesus,<br>direto no seu WhatsApp — às 6h da manhã.
+    </p>
+
+    <!-- Visual solução -->
+    <div class="relative bg-white rounded-3xl border border-amber-100 shadow-xl p-6 max-w-sm mx-auto">
+      <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-400 to-amber-600 text-white text-xs font-bold px-4 py-1.5 rounded-full shadow">
+        ENTREGUE TODO DIA ÀS 6H ☀️
+      </div>
+      <div class="flex items-center gap-3 mb-4 pt-2">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center flex-shrink-0 shadow">
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="white">
+            <rect x="7.5" y="1" width="3" height="16" rx="1.5"/>
+            <rect x="1" y="6" width="16" height="3" rx="1.5"/>
+          </svg>
+        </div>
+        <div class="text-left">
+          <p class="font-bold text-slate-800 text-sm">Orações Diárias</p>
+          <p class="text-xs text-emerald-600 flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 inline-block"></span> online
+          </p>
+        </div>
+      </div>
+      <div class="space-y-2">
+        <div class="bg-emerald-500 rounded-2xl rounded-tl-sm p-3 text-white text-sm text-left">
+          🙏 Bom dia, Maria! Aqui está sua oração de hoje:<br><br>
+          <em class="text-emerald-100">"Pai Celestial, neste novo dia, entrego a Ti todas as minhas preocupações. Que Sua paz que excede todo entendimento guarde meu coração..."</em>
+        </div>
+        <div class="bg-emerald-500 rounded-2xl rounded-tl-sm p-3 text-white text-sm text-left">
+          🎵 <strong>Áudio da oração</strong> — 1:45 min
+          <div class="flex items-center gap-2 mt-2">
+            <div class="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center">▶</div>
+            <div class="flex-1 h-1 bg-white/30 rounded-full"><div class="w-1/3 h-full bg-white rounded-full"></div></div>
+            <span class="text-xs opacity-60">1:45</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     COMO FUNCIONA
+═════════════════════════════════════════════════ -->
+<section class="py-20 px-4 bg-white fade-in">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="divider"></div>
+    <h2 class="playfair text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
+      Como funciona?
+    </h2>
+    <p class="text-slate-500 text-lg mb-14">Simples como um milagre 🕊️</p>
+
+    <div class="grid sm:grid-cols-3 gap-6">
+      <!-- Passo 1 -->
+      <div class="relative bg-amber-50 rounded-3xl p-7 border border-amber-100 text-center group hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow">1</div>
+        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-3xl">📱</div>
+        <h3 class="font-bold text-slate-800 mb-2">Clique e entre no WhatsApp</h3>
+        <p class="text-sm text-slate-500 leading-relaxed">Acesse pelo botão abaixo e inicie a conversa com um clique</p>
+      </div>
+      <!-- Seta -->
+      <div class="hidden sm:flex items-center justify-start -translate-x-4 text-amber-300 text-3xl self-center">›</div>
+      <!-- Passo 2 -->
+      <div class="relative bg-amber-50 rounded-3xl p-7 border border-amber-100 text-center group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 sm:-ml-10">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-white font-bold text-sm shadow">2</div>
+        <div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-sm text-3xl">✨</div>
+        <h3 class="font-bold text-slate-800 mb-2">Ative seu teste de 7 dias</h3>
+        <p class="text-sm text-slate-500 leading-relaxed">Responda algumas perguntas rápidas para personalizarmos sua oração</p>
+      </div>
+      <!-- Seta -->
+      <div class="hidden sm:flex items-center justify-start -translate-x-4 text-amber-300 text-3xl self-center">›</div>
+      <!-- Passo 3 -->
+      <div class="relative bg-gradient-to-br from-amber-400 to-amber-600 rounded-3xl p-7 border border-amber-500 text-center group hover:shadow-lg hover:-translate-y-1 transition-all duration-300 sm:-ml-10">
+        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center text-amber-600 font-bold text-sm shadow">3</div>
+        <div class="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🙏</div>
+        <h3 class="font-bold text-white mb-2">Receba orações todo dia</h3>
+        <p class="text-sm text-amber-100 leading-relaxed">Às 6h da manhã, uma oração + áudio especial esperando por você</p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <a href="https://wa.me/5513982290879?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
+         target="_blank" class="btn-cta inline-flex max-w-sm mx-auto">
+        <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Quero começar agora — é grátis
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     BENEFÍCIOS
+═════════════════════════════════════════════════ -->
+<section class="section-warm py-20 px-4 fade-in">
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-12">
+      <div class="divider"></div>
+      <h2 class="playfair text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
+        Tudo que você vai receber
+      </h2>
+      <p class="text-slate-500 text-lg">Sua jornada espiritual, cuidada com amor ✨</p>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div class="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+        <div class="text-3xl mb-3">🙏</div>
+        <h3 class="font-bold text-slate-800 mb-1">Oração personalizada</h3>
+        <p class="text-sm text-slate-500">Escrita especialmente para você, baseada nas suas necessidades espirituais</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+        <div class="text-3xl mb-3">🎵</div>
+        <h3 class="font-bold text-slate-800 mb-1">Áudio da oração</h3>
+        <p class="text-sm text-slate-500">Ouça sua oração em qualquer lugar: no trânsito, no trabalho ou ao acordar</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+        <div class="text-3xl mb-3">📖</div>
+        <h3 class="font-bold text-slate-800 mb-1">Reflexão do Evangelho</h3>
+        <p class="text-sm text-slate-500">Meditação profunda sobre a Palavra de Deus para começar o dia inspirado <span class="text-purple-500 text-xs font-semibold">(Plus)</span></p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+        <div class="text-3xl mb-3">☀️</div>
+        <h3 class="font-bold text-slate-800 mb-1">Todo dia às 6h</h3>
+        <p class="text-sm text-slate-500">A mensagem certa, na hora certa, para você começar o dia com Deus</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+        <div class="text-3xl mb-3">💛</div>
+        <h3 class="font-bold text-slate-800 mb-1">Paz e direção espiritual</h3>
+        <p class="text-sm text-slate-500">Reconecte-se com Deus, Nossa Senhora e sinta a paz que transcende tudo</p>
+      </div>
+      <div class="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+        <div class="text-3xl mb-3">📱</div>
+        <h3 class="font-bold text-slate-800 mb-1">No WhatsApp, sem apps</h3>
+        <p class="text-sm text-slate-500">Sem baixar nada. Chega pelo WhatsApp que você já usa todos os dias</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     PLANOS
+═════════════════════════════════════════════════ -->
+<section class="py-20 px-4 bg-white fade-in" id="planos">
+  <div class="max-w-3xl mx-auto text-center">
+    <div class="divider"></div>
+    <h2 class="playfair text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
+      Escolha seu plano
+    </h2>
+    <p class="text-slate-500 text-lg mb-4">Todos começam com <strong class="text-amber-600">7 dias 100% grátis</strong></p>
+
+    <!-- Urgency badge -->
+    <div class="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 text-xs font-semibold px-4 py-2 rounded-full mb-10">
+      🔥 Oferta por tempo limitado — preços podem subir em breve
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
+      <!-- Premium -->
+      <div class="plan-card bg-white rounded-3xl border-2 border-amber-200 p-7 shadow-lg relative">
+        <div class="text-left mb-6">
+          <span class="inline-block bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-full mb-3">⭐ PREMIUM</span>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-4xl font-black text-slate-900">R$ 9</span>
+            <span class="text-2xl font-bold text-slate-900">,90</span>
+            <span class="text-slate-400 text-sm mb-1">/mês</span>
+          </div>
+          <p class="text-sm text-slate-400 line-through">R$ 19,90/mês</p>
+          <p class="text-xs text-emerald-600 font-semibold mt-1">Economize 50% agora ✓</p>
+        </div>
+        <ul class="space-y-3 text-sm text-left mb-7">
+          <li class="flex items-center gap-2 text-slate-700">
+            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Oração diária personalizada
+          </li>
+          <li class="flex items-center gap-2 text-slate-700">
+            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Áudio da oração (TTS)
+          </li>
+          <li class="flex items-center gap-2 text-slate-700">
+            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Todos os dias às 6h no WhatsApp
+          </li>
+          <li class="flex items-center gap-2 text-slate-700">
+            <svg class="w-4 h-4 text-emerald-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            7 dias grátis para testar
+          </li>
+          <li class="flex items-center gap-2 text-slate-300">
+            <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+            Reflexão do Evangelho
+          </li>
+        </ul>
+        <a href="https://wa.me/5513982290879?text=Quero%20testar%20o%20plano%20Premium%20-%207%20dias%20gr%C3%A1tis"
+           target="_blank" class="btn-cta-gold">
+          Testar grátis — Premium
+        </a>
+      </div>
+
+      <!-- Plus -->
+      <div class="plan-card bg-gradient-to-br from-purple-600 to-purple-800 rounded-3xl p-7 shadow-2xl relative overflow-hidden">
+        <!-- Glow -->
+        <div class="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-purple-400/20 blur-2xl"></div>
+        <!-- Badge mais popular -->
+        <div class="absolute -top-1 right-6 bg-gradient-to-r from-amber-400 to-amber-500 text-white text-xs font-black px-4 py-1.5 rounded-b-xl shadow">
+          🔥 MAIS POPULAR
+        </div>
+        <div class="text-left mb-6 relative">
+          <span class="inline-block bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">💎 PLUS</span>
+          <div class="flex items-end gap-1 mb-1">
+            <span class="text-4xl font-black text-white">R$ 29</span>
+            <span class="text-2xl font-bold text-white">,90</span>
+            <span class="text-purple-200 text-sm mb-1">/mês</span>
+          </div>
+          <p class="text-sm text-purple-300 line-through">R$ 59,90/mês</p>
+          <p class="text-xs text-amber-300 font-semibold mt-1">Economize 50% agora ✓</p>
+        </div>
+        <ul class="space-y-3 text-sm text-left mb-7 relative">
+          <li class="flex items-center gap-2 text-white">
+            <svg class="w-4 h-4 text-amber-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Tudo do plano Premium
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <svg class="w-4 h-4 text-amber-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Reflexão do Evangelho diária
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <svg class="w-4 h-4 text-amber-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Áudio da reflexão (PTT)
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <svg class="w-4 h-4 text-amber-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Conteúdo espiritual exclusivo
+          </li>
+          <li class="flex items-center gap-2 text-white">
+            <svg class="w-4 h-4 text-amber-300 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            7 dias grátis para testar
+          </li>
+        </ul>
+        <a href="https://wa.me/5513982290879?text=Quero%20testar%20o%20plano%20Plus%20-%207%20dias%20gr%C3%A1tis"
+           target="_blank"
+           class="relative inline-flex items-center justify-center w-full py-4 rounded-2xl font-bold text-purple-700 bg-white hover:bg-amber-50 shadow-lg transition-all hover:-translate-y-0.5 gap-2">
+          <svg class="wa-icon" style="fill:#5b21b6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Testar grátis — Plus
+        </a>
+      </div>
+    </div>
+    <p class="text-sm text-slate-400 mt-6">Sem cartão de crédito • Cancele quando quiser pelo WhatsApp</p>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     DEPOIMENTOS
+═════════════════════════════════════════════════ -->
+<section class="section-warm py-20 px-4 fade-in">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <div class="divider"></div>
+      <h2 class="playfair text-3xl sm:text-4xl font-bold text-slate-900 mb-3">
+        Vidas transformadas 🙏
+      </h2>
+      <p class="text-slate-500 text-lg">O que nossos assinantes estão dizendo</p>
+    </div>
+
+    <div class="grid sm:grid-cols-3 gap-5">
+      <!-- Depoimento 1 -->
+      <div class="bg-white rounded-3xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all">
+        <div class="stars text-lg mb-3">★★★★★</div>
+        <p class="text-slate-700 text-sm leading-relaxed mb-4 italic">
+          "Acordar e já encontrar uma oração personalizada no WhatsApp mudou completamente o meu dia. Sinto mais paz, foco e a presença de Deus de verdade. 🙏"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center text-white font-bold">M</div>
+          <div>
+            <p class="font-semibold text-slate-800 text-sm">Maria S.</p>
+            <p class="text-xs text-slate-400">Salvador, BA • Plano Plus</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div class="bg-white rounded-3xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all">
+        <div class="stars text-lg mb-3">★★★★★</div>
+        <p class="text-slate-700 text-sm leading-relaxed mb-4 italic">
+          "Sou muito ocupado e nunca tinha tempo pra orar. Agora a oração chega no WhatsApp e eu ouço no caminho pro trabalho. Minha fé voltou a crescer! ✨"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold">J</div>
+          <div>
+            <p class="font-semibold text-slate-800 text-sm">José R.</p>
+            <p class="text-xs text-slate-400">São Paulo, SP • Plano Premium</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Depoimento 3 -->
+      <div class="bg-white rounded-3xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all">
+        <div class="stars text-lg mb-3">★★★★★</div>
+        <p class="text-slate-700 text-sm leading-relaxed mb-4 italic">
+          "Passava por um momento muito difícil. A oração que recebi naquele dia pareceu escrita especialmente pra mim. Chorei de emoção. Deus é bom demais! 💛"
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-rose-400 to-rose-600 flex items-center justify-center text-white font-bold">A</div>
+          <div>
+            <p class="font-semibold text-slate-800 text-sm">Ana P.</p>
+            <p class="text-xs text-slate-400">Fortaleza, CE • Plano Plus</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mini social proof counter -->
+    <div class="flex flex-wrap justify-center gap-8 mt-12 text-center">
+      <div>
+        <p class="playfair text-4xl font-bold text-gold-dark text-amber-600">+1.200</p>
+        <p class="text-sm text-slate-500 mt-1">assinantes ativos</p>
+      </div>
+      <div class="w-px bg-amber-100 hidden sm:block"></div>
+      <div>
+        <p class="playfair text-4xl font-bold text-amber-600">98%</p>
+        <p class="text-sm text-slate-500 mt-1">de satisfação</p>
+      </div>
+      <div class="w-px bg-amber-100 hidden sm:block"></div>
+      <div>
+        <p class="playfair text-4xl font-bold text-amber-600">+40k</p>
+        <p class="text-sm text-slate-500 mt-1">orações enviadas</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     CTA FINAL
+═════════════════════════════════════════════════ -->
+<section class="bg-gradient-to-br from-amber-500 to-amber-700 py-20 px-4 fade-in">
+  <div class="max-w-xl mx-auto text-center">
+    <div class="w-16 h-16 bg-white/20 rounded-3xl flex items-center justify-center mx-auto mb-6">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="white">
+        <rect x="14" y="2" width="4" height="28" rx="2"/>
+        <rect x="2" y="11" width="28" height="4" rx="2"/>
+      </svg>
+    </div>
+    <h2 class="playfair text-3xl sm:text-5xl font-bold text-white mb-4 leading-tight">
+      Comece hoje sua<br>jornada espiritual
+    </h2>
+    <p class="text-amber-100 text-lg mb-8 leading-relaxed">
+      Mais de 1.000 pessoas já recebem uma oração todos os dias.<br>
+      Sua vez de sentir essa paz.
+    </p>
+
+    <!-- Urgency -->
+    <div class="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-full mb-8">
+      <span class="w-2 h-2 rounded-full bg-red-400 online-dot"></span>
+      <span id="online-count-2">847</span> pessoas visualizando agora
+    </div>
+
+    <div class="flex flex-col items-center gap-4">
+      <a href="https://wa.me/5513982290879?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
+         target="_blank" class="btn-cta pulse bg-white text-emerald-700" style="background:white;color:#15803d;box-shadow:0 8px 30px rgba(0,0,0,.2)">
+        <svg class="wa-icon" style="fill:#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+        Quero receber minha oração 🙏
+      </a>
+      <p class="text-amber-100 text-sm">✅ Sem cartão &nbsp;•&nbsp; ✅ 7 dias grátis &nbsp;•&nbsp; ✅ Cancele fácil</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     FAQ
+═════════════════════════════════════════════════ -->
+<section class="py-20 px-4 bg-white fade-in">
+  <div class="max-w-2xl mx-auto">
+    <div class="text-center mb-12">
+      <div class="divider"></div>
+      <h2 class="playfair text-3xl sm:text-4xl font-bold text-slate-900 mb-3">Perguntas frequentes</h2>
+      <p class="text-slate-500">Tire suas dúvidas antes de começar</p>
+    </div>
+
+    <div class="space-y-3">
+      <details class="faq-item bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden group" open>
+        <summary class="flex items-center justify-between p-5 cursor-pointer">
+          <span class="font-semibold text-slate-800">É realmente gratuito por 7 dias?</span>
+          <svg class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
+          Sim! Os primeiros 7 dias são 100% gratuitos, sem precisar de cartão. Você experimenta tudo sem compromisso. Só após os 7 dias, caso queira continuar, escolhe um plano.
+        </div>
+      </details>
+
+      <details class="faq-item bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden group">
+        <summary class="flex items-center justify-between p-5 cursor-pointer">
+          <span class="font-semibold text-slate-800">Preciso informar cartão de crédito?</span>
+          <svg class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
+          Não! Para começar os 7 dias grátis não precisa de nenhum dado financeiro. Simples assim.
+        </div>
+      </details>
+
+      <details class="faq-item bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden group">
+        <summary class="flex items-center justify-between p-5 cursor-pointer">
+          <span class="font-semibold text-slate-800">Posso cancelar quando quiser?</span>
+          <svg class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
+          Sim! Você pode cancelar a qualquer momento enviando uma mensagem no próprio WhatsApp. Sem burocracia, sem taxa.
+        </div>
+      </details>
+
+      <details class="faq-item bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden group">
+        <summary class="flex items-center justify-between p-5 cursor-pointer">
+          <span class="font-semibold text-slate-800">As orações são personalizadas de verdade?</span>
+          <svg class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
+          Sim! Cada oração é gerada com inteligência artificial treinada com o Evangelho e a tradição católica, considerando seu nome e suas necessidades espirituais. Cada dia é diferente e único para você.
+        </div>
+      </details>
+
+      <details class="faq-item bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden group">
+        <summary class="flex items-center justify-between p-5 cursor-pointer">
+          <span class="font-semibold text-slate-800">Precisa baixar algum aplicativo?</span>
+          <svg class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
+          Não precisa baixar nada. Tudo chega pelo WhatsApp que você já usa. É só cadastrar e pronto!
+        </div>
+      </details>
+
+      <details class="faq-item bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden group">
+        <summary class="flex items-center justify-between p-5 cursor-pointer">
+          <span class="font-semibold text-slate-800">Que horário chega a oração?</span>
+          <svg class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
+          Todo dia às 6h da manhã, para você começar o dia conectado com Deus desde cedo. ☀️
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════
+     FOOTER
+═════════════════════════════════════════════════ -->
+<footer class="bg-slate-900 py-10 px-4 text-center">
+  <div class="max-w-xl mx-auto">
+    <div class="flex items-center justify-center gap-2.5 mb-4">
+      <div class="w-8 h-8 bg-gradient-to-br from-amber-400 to-amber-600 rounded-xl flex items-center justify-center">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="white"><rect x="7" y="1" width="2" height="14" rx="1"/><rect x="1" y="5.5" width="14" height="2" rx="1"/></svg>
+      </div>
+      <span class="font-bold text-white text-sm">Orações Diárias</span>
+    </div>
+    <p class="text-slate-400 text-sm mb-4">Sua jornada espiritual, todo dia 🙏</p>
+    <a href="https://wa.me/5513982290879?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
+       target="_blank"
+       class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 transition-colors underline mb-6">
+      Falar com a gente no WhatsApp
+    </a>
+    <p class="text-slate-600 text-xs">© 2025 Orações Diárias. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+<!-- ════════════════════════════════════════════════
+     FLOATING CTA (mobile)
+═════════════════════════════════════════════════ -->
+<div class="fixed bottom-4 left-4 right-4 z-40 sm:hidden" id="floating-cta" style="display:none!important">
+  <a href="https://wa.me/5513982290879?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
+     target="_blank" class="btn-cta pulse shadow-2xl">
+    <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    Começar grátis 🙏
+  </a>
+</div>
+
+
+<script>
+// ── Scroll fade-in ──────────────────────────────────────────────
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── Floating CTA: aparece após scrollar 400px ───────────────────
+const floatBtn = document.getElementById('floating-cta');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    floatBtn.style.removeProperty('display');
+  } else {
+    floatBtn.style.setProperty('display', 'none', 'important');
+  }
+}, { passive: true });
+
+// ── Contador fake de pessoas online (varia suavemente) ──────────
+function randomOnline() {
+  return Math.floor(Math.random() * 120) + 780; // 780–900
+}
+function updateCounters() {
+  const n = randomOnline();
+  ['online-count', 'online-count-2'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = n.toLocaleString('pt-BR');
+  });
+}
+updateCounters();
+setInterval(updateCounters, 7000 + Math.random() * 5000);
+</script>
+
+</body>
+</html>
