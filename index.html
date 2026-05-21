@@ -815,11 +815,49 @@ function updateCounters() {
 updateCounters();
 setInterval(updateCounters, 7000 + Math.random() * 5000);
 
-// ── Meta Pixel — rastrear cliques nos botões de WhatsApp ──────────
+// ── Meta Pixel + Conversions API (deduplicação por event_id) ──────
+const CAPI_URL = 'https://n8n.apicesystem.shop/webhook/meta-capi';
+
+function uid() {
+  return Date.now().toString(36) + Math.random().toString(36).substring(2, 8);
+}
+function getCookie(name) {
+  var v = document.cookie.split(';').find(function(c){ return c.trim().startsWith(name + '='); });
+  return v ? v.trim().split('=').slice(1).join('=') : '';
+}
+function getFbc() {
+  var fbclid = new URLSearchParams(location.search).get('fbclid');
+  return fbclid ? 'fb.1.' + Date.now() + '.' + fbclid : (getCookie('_fbc') || '');
+}
+function sendCAPI(eventName, eventId, customData) {
+  var payload = {
+    event_name: eventName,
+    event_id: eventId,
+    event_source_url: location.href,
+    fbp: getCookie('_fbp'),
+    fbc: getFbc(),
+    user_agent: navigator.userAgent
+  };
+  if (customData) payload.custom_data = customData;
+  fetch(CAPI_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  }).catch(function(){});
+}
+
+// PageView — browser pixel + CAPI com mesmo event_id
+var pvId = uid();
+fbq('track', 'PageView', {}, { eventID: pvId });
+sendCAPI('PageView', pvId);
+
+// Lead — clique em botão WhatsApp
 document.querySelectorAll('a[href*="wa.me"]').forEach(function(btn) {
   btn.addEventListener('click', function() {
+    var leadId = uid();
     var label = btn.textContent.trim().substring(0, 60);
-    fbq('track', 'Lead', { content_name: label });
+    fbq('track', 'Lead', { content_name: label }, { eventID: leadId });
+    sendCAPI('Lead', leadId, { content_name: label });
   });
 });
 </script>
