@@ -9,6 +9,10 @@
 <meta property="og:title" content="Orações Diárias — Oração diária no seu WhatsApp">
 <meta property="og:description" content="Receba uma oração personalizada todos os dias, direto no WhatsApp. Sem compromisso. 7 dias grátis.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://acesso.oracoesdiarias.online">
+<meta property="og:image" content="https://acesso.oracoesdiarias.online/icons/icon-512.png">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
 <meta name="theme-color" content="#f59e0b">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -136,9 +140,9 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
     <div class="flex items-center gap-3">
       <div class="hidden sm:flex items-center gap-1.5 text-xs text-emerald-600 font-medium">
         <span class="w-2 h-2 rounded-full bg-emerald-500 online-dot"></span>
-        <span id="online-count">847</span> online agora
+        +1.000 assinantes ativos
       </div>
-      <a href="https://wa.me/557193771975?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis" target="_blank"
+      <a href="#hero-form-wrap"
          class="bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow hover:shadow-md transition-all hover:-translate-y-0.5">
         Começar grátis 🙏
       </a>
@@ -177,19 +181,36 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
       entregues diretamente no seu WhatsApp.
     </p>
 
-    <!-- CTA principal -->
-    <div class="flex flex-col items-center gap-3 mb-6">
-      <a href="https://wa.me/557193771975?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
-         target="_blank" class="btn-cta pulse">
-        <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        Começar 7 dias grátis no WhatsApp
-      </a>
-      <p class="text-sm text-slate-400 flex items-center gap-2">
-        <svg class="w-4 h-4 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-        Sem compromisso &nbsp;•&nbsp; Cancelamento fácil &nbsp;•&nbsp; Sem cartão
-      </p>
+    <!-- Formulário de captura inline -->
+    <div class="w-full max-w-md mx-auto mb-6" id="hero-form-wrap">
+      <form id="hero-form" class="bg-white rounded-3xl shadow-xl border border-amber-100 p-6 text-left">
+        <p class="text-center text-sm font-semibold text-slate-500 mb-4">
+          ✨ Preencha e receba sua primeira oração <strong class="text-amber-600">hoje mesmo</strong>
+        </p>
+        <div class="space-y-3 mb-4">
+          <input id="hf-nome" type="text" placeholder="Seu nome" required
+            class="w-full bg-amber-50 border border-amber-100 rounded-2xl px-4 py-3.5 text-slate-800 text-base outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition">
+          <div class="relative">
+            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-medium pointer-events-none">+55</span>
+            <input id="hf-wa" type="tel" placeholder="(DDD) 9 0000-0000" required
+              class="w-full bg-amber-50 border border-amber-100 rounded-2xl pl-12 pr-4 py-3.5 text-slate-800 text-base outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-100 transition">
+          </div>
+        </div>
+        <button type="submit" id="hf-btn"
+          class="btn-cta pulse w-full" style="max-width:100%">
+          <svg style="width:20px;height:20px;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Quero minhas orações grátis 🙏
+        </button>
+        <p class="text-xs text-slate-400 text-center mt-3">
+          ✅ Sem cartão &nbsp;•&nbsp; ✅ 7 dias grátis &nbsp;•&nbsp; ✅ Cancele fácil
+        </p>
+      </form>
+      <!-- Estado de sucesso -->
+      <div id="hero-form-success" class="hidden bg-emerald-50 border border-emerald-200 rounded-3xl p-8 text-center">
+        <div class="text-5xl mb-3">🙏</div>
+        <h3 class="font-bold text-emerald-800 text-lg mb-2">Cadastro realizado!</h3>
+        <p class="text-emerald-700 text-sm leading-relaxed">Em instantes você receberá uma mensagem no WhatsApp com sua primeira oração. Fique de olho! ☀️</p>
+      </div>
     </div>
 
     <!-- Hero visual -->
@@ -380,11 +401,8 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
     </div>
 
     <div class="mt-12">
-      <a href="https://wa.me/557193771975?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
-         target="_blank" class="btn-cta inline-flex max-w-sm mx-auto">
-        <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
+      <a href="#hero-form-wrap" class="btn-cta inline-flex max-w-sm mx-auto">
+        <svg class="wa-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
         Quero começar agora — é grátis
       </a>
     </div>
@@ -415,10 +433,11 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
         <h3 class="font-bold text-slate-800 mb-1">Áudio da oração</h3>
         <p class="text-sm text-slate-500">Ouça sua oração em qualquer lugar: no trânsito, no trabalho ou ao acordar</p>
       </div>
-      <div class="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
+      <div class="bg-white rounded-2xl p-6 border border-purple-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5 relative">
+        <div class="absolute top-3 right-3 bg-purple-100 text-purple-600 text-xs font-bold px-2 py-0.5 rounded-full">Só no Plus</div>
         <div class="text-3xl mb-3">📖</div>
         <h3 class="font-bold text-slate-800 mb-1">Reflexão do Evangelho</h3>
-        <p class="text-sm text-slate-500">Meditação profunda sobre a Palavra de Deus para começar o dia inspirado <span class="text-purple-500 text-xs font-semibold">(Plus)</span></p>
+        <p class="text-sm text-slate-500">Meditação profunda sobre a Palavra de Deus para começar o dia inspirado — com áudio do padre</p>
       </div>
       <div class="bg-white rounded-2xl p-6 border border-amber-100 shadow-sm hover:shadow-md transition-all hover:-translate-y-0.5">
         <div class="text-3xl mb-3">☀️</div>
@@ -491,8 +510,7 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
             Reflexão do Evangelho
           </li>
         </ul>
-        <a href="https://wa.me/557193771975?text=Quero%20testar%20o%20plano%20Premium%20-%207%20dias%20gr%C3%A1tis"
-           target="_blank" class="btn-cta-gold">
+        <a href="#hero-form-wrap" class="btn-cta-gold scroll-to-form" data-plano="premium">
           Testar grátis — Premium
         </a>
       </div>
@@ -537,13 +555,9 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
             7 dias grátis para testar
           </li>
         </ul>
-        <a href="https://wa.me/557193771975?text=Quero%20testar%20o%20plano%20Plus%20-%207%20dias%20gr%C3%A1tis"
-           target="_blank"
-           class="relative inline-flex items-center justify-center w-full py-4 rounded-2xl font-bold text-purple-700 bg-white hover:bg-amber-50 shadow-lg transition-all hover:-translate-y-0.5 gap-2">
-          <svg class="wa-icon" style="fill:#5b21b6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-          </svg>
-          Testar grátis — Plus
+        <a href="#hero-form-wrap"
+           class="scroll-to-form relative inline-flex items-center justify-center w-full py-4 rounded-2xl font-bold text-purple-700 bg-white hover:bg-amber-50 shadow-lg transition-all hover:-translate-y-0.5 gap-2" data-plano="plus">
+          Testar grátis — Plus 💎
         </a>
       </div>
     </div>
@@ -652,19 +666,14 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
       Sua vez de sentir essa paz.
     </p>
 
-    <!-- Urgency -->
+    <!-- Social proof -->
     <div class="inline-flex items-center gap-2 bg-white/20 text-white text-sm font-semibold px-5 py-2.5 rounded-full mb-8">
-      <span class="w-2 h-2 rounded-full bg-red-400 online-dot"></span>
-      <span id="online-count-2">847</span> pessoas visualizando agora
+      🙏 Mais de 1.000 pessoas já recebem orações todo dia
     </div>
 
     <div class="flex flex-col items-center gap-4">
-      <a href="https://wa.me/557193771975?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
-         target="_blank" class="btn-cta pulse bg-white text-emerald-700" style="background:white;color:#15803d;box-shadow:0 8px 30px rgba(0,0,0,.2)">
-        <svg class="wa-icon" style="fill:#15803d" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-        Quero receber minha oração 🙏
+      <a href="#hero-form-wrap" class="btn-cta pulse" style="background:white;color:#15803d;box-shadow:0 8px 30px rgba(0,0,0,.2)">
+        🙏 Quero receber minha oração
       </a>
       <p class="text-amber-100 text-sm">✅ Sem cartão &nbsp;•&nbsp; ✅ 7 dias grátis &nbsp;•&nbsp; ✅ Cancele fácil</p>
     </div>
@@ -743,6 +752,26 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
           Todo dia às 6h da manhã, para você começar o dia conectado com Deus desde cedo. ☀️
         </div>
       </details>
+
+      <details class="faq-item bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden group">
+        <summary class="flex items-center justify-between p-5 cursor-pointer">
+          <span class="font-semibold text-slate-800">Como funciona o pagamento após os 7 dias?</span>
+          <svg class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
+          Simples! Ao final dos 7 dias gratuitos, enviamos um link de pagamento direto no seu WhatsApp. Você escolhe o plano e paga na hora — aceitamos <strong>PIX e cartão de crédito</strong>. Sem surpresas, sem cobranças automáticas. 🙏
+        </div>
+      </details>
+
+      <details class="faq-item bg-amber-50 rounded-2xl border border-amber-100 overflow-hidden group">
+        <summary class="flex items-center justify-between p-5 cursor-pointer">
+          <span class="font-semibold text-slate-800">O que acontece se eu não gostar?</span>
+          <svg class="w-5 h-5 text-amber-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+        </summary>
+        <div class="px-5 pb-5 text-slate-600 text-sm leading-relaxed">
+          Sem problema algum! Durante os 7 dias grátis você não paga nada. Se preferir não continuar, é só não assinar — não existe cobrança automática, não precisa cancelar nada. E se já for assinante, cancele quando quiser pelo próprio WhatsApp, sem burocracia. ✌️
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -760,11 +789,16 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
       <span class="font-bold text-white text-sm">Orações Diárias</span>
     </div>
     <p class="text-slate-400 text-sm mb-4">Sua jornada espiritual, todo dia 🙏</p>
-    <a href="https://wa.me/557193771975?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
+    <a href="https://wa.me/557193771975?text=Ol%C3%A1%2C%20preciso%20de%20ajuda"
        target="_blank"
        class="inline-flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 transition-colors underline mb-6">
-      Falar com a gente no WhatsApp
+      💬 Suporte — fale conosco no WhatsApp
     </a>
+    <div class="flex justify-center gap-4 text-slate-600 text-xs mb-3">
+      <a href="https://acesso.oracoesdiarias.online/termos" class="hover:text-slate-400 transition-colors">Termos de Uso</a>
+      <span>•</span>
+      <a href="https://acesso.oracoesdiarias.online/privacidade" class="hover:text-slate-400 transition-colors">Privacidade</a>
+    </div>
     <p class="text-slate-600 text-xs">© 2025 Orações Diárias. Todos os direitos reservados.</p>
   </div>
 </footer>
@@ -774,8 +808,7 @@ src="https://www.facebook.com/tr?id=1008774198158677&ev=PageView&noscript=1"
      FLOATING CTA (mobile)
 ═════════════════════════════════════════════════ -->
 <div class="fixed bottom-4 left-4 right-4 z-40 sm:hidden" id="floating-cta" style="display:none!important">
-  <a href="https://wa.me/557193771975?text=Quero%20come%C3%A7ar%207%20dias%20gr%C3%A1tis"
-     target="_blank" class="btn-cta pulse shadow-2xl">
+  <a href="#hero-form-wrap" class="btn-cta pulse shadow-2xl">
     <svg class="wa-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
     </svg>
@@ -801,19 +834,94 @@ window.addEventListener('scroll', () => {
   }
 }, { passive: true });
 
-// ── Contador fake de pessoas online (varia suavemente) ──────────
-function randomOnline() {
-  return Math.floor(Math.random() * 120) + 780; // 780–900
-}
-function updateCounters() {
-  const n = randomOnline();
-  ['online-count', 'online-count-2'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = n.toLocaleString('pt-BR');
+
+// ── Botões de plano → scroll ao formulário + pré-selecionar ─────
+document.querySelectorAll('.scroll-to-form').forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    var plano = btn.dataset.plano || '';
+    var wrap = document.getElementById('hero-form-wrap');
+    if (wrap) {
+      wrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      if (plano) {
+        var label = plano === 'plus' ? '💎 Plano Plus' : '⭐ Plano Premium';
+        var hint = wrap.querySelector('#hf-plano-hint');
+        if (!hint) {
+          hint = document.createElement('p');
+          hint.id = 'hf-plano-hint';
+          hint.className = 'text-center text-xs font-semibold mb-2';
+          var form = document.getElementById('hero-form');
+          if (form) form.insertBefore(hint, form.firstChild);
+        }
+        hint.textContent = 'Você escolheu: ' + label;
+        hint.style.color = plano === 'plus' ? '#7c3aed' : '#d97706';
+        // guarda plano para envio
+        document.getElementById('hero-form').dataset.plano = plano;
+      }
+      document.getElementById('hf-nome') && document.getElementById('hf-nome').focus();
+    }
+  });
+});
+
+// ── Formulário hero — captura e disparo automático ─────────────
+const heroForm = document.getElementById('hero-form');
+if (heroForm) {
+  heroForm.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = document.getElementById('hf-btn');
+    const nome = document.getElementById('hf-nome').value.trim();
+    const waRaw = document.getElementById('hf-wa').value.replace(/\D/g, '');
+    const whatsapp = '55' + waRaw;
+
+    if (waRaw.length < 10) {
+      alert('Por favor, informe um número de WhatsApp válido.');
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Verificando... ⏳';
+
+    try {
+      const res = await fetch('https://n8n.apicesystem.shop/webhook/novo-cadastro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ whatsapp, nome, necessidade: 'fe', origem: 'lp-hero', plano: heroForm.dataset.plano || 'premium' })
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      // Número já cadastrado
+      if (res.status === 409 || data.status === 'duplicate') {
+        btn.disabled = false;
+        btn.textContent = 'Quero minhas orações grátis 🙏';
+        // Mostrar erro inline
+        var errEl = document.getElementById('hf-erro');
+        if (!errEl) {
+          errEl = document.createElement('p');
+          errEl.id = 'hf-erro';
+          errEl.style.cssText = 'font-size:13px;color:#E11D48;background:#FFF1F2;border:1px solid #FECDD3;border-radius:10px;padding:10px 14px;margin-top:8px;text-align:center;';
+          heroForm.appendChild(errEl);
+        }
+        errEl.textContent = '📱 Número já cadastrado. Acesse o app para entrar:';
+        errEl.innerHTML += ' <a href="https://app.oracoesdiarias.online" style="color:#E11D48;font-weight:700;text-decoration:underline">Acessar app →</a>';
+        return;
+      }
+
+      // Sucesso
+      const regId = uid();
+      fbq('track', 'CompleteRegistration', { content_name: 'LP Hero Form' }, { eventID: regId });
+      sendCAPI('CompleteRegistration', regId, { content_name: 'LP Hero Form' });
+
+      document.getElementById('hero-form').classList.add('hidden');
+      document.getElementById('hero-form-success').classList.remove('hidden');
+
+    } catch(err) {
+      btn.disabled = false;
+      btn.textContent = 'Quero minhas orações grátis 🙏';
+      alert('Erro ao enviar. Tente novamente.');
+    }
   });
 }
-updateCounters();
-setInterval(updateCounters, 7000 + Math.random() * 5000);
 
 // ── Meta Pixel + Conversions API (deduplicação por event_id) ──────
 const CAPI_URL = 'https://n8n.apicesystem.shop/webhook/meta-capi';
