@@ -864,6 +864,9 @@ document.querySelectorAll('.scroll-to-form').forEach(function(btn) {
 });
 
 // ── Formulário hero — captura e disparo automático ─────────────
+const SUPA_URL = 'https://supabase.apicesystem.shop';
+const SUPA_KEY = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJzdXBhYmFzZSIsImlhdCI6MTc3NjEwNzg4MCwiZXhwIjo0OTMxNzgxNDgwLCJyb2xlIjoic2VydmljZV9yb2xlIn0.nJbj6erTeo_5On0_rY_AIM8Tuf0RIikbNQ_XYqAQdF0';
+
 const heroForm = document.getElementById('hero-form');
 if (heroForm) {
   heroForm.addEventListener('submit', async function(e) {
@@ -871,7 +874,7 @@ if (heroForm) {
     const btn = document.getElementById('hf-btn');
     const nome = document.getElementById('hf-nome').value.trim();
     const waRaw = document.getElementById('hf-wa').value.replace(/\D/g, '');
-    const whatsapp = '55' + waRaw;
+    const whatsapp = waRaw.startsWith('55') ? waRaw : '55' + waRaw;
 
     if (waRaw.length < 10) {
       alert('Por favor, informe um número de WhatsApp válido.');
@@ -879,22 +882,19 @@ if (heroForm) {
     }
 
     btn.disabled = true;
-    btn.textContent = 'Verificando... ⏳';
+    btn.textContent = 'Cadastrando... ⏳';
 
     try {
-      const res = await fetch('https://n8n.apicesystem.shop/webhook/novo-cadastro', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ whatsapp, nome, necessidade: 'fe', origem: 'lp-hero', plano: heroForm.dataset.plano || 'premium' })
+      // 1. Verificar se já existe — direto no Supabase (~80ms)
+      const checkResp = await fetch(`${SUPA_URL}/rest/v1/usuarios?whatsapp=eq.${whatsapp}&select=id&limit=1`, {
+        headers: { 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY }
       });
+      const existing = await checkResp.json().catch(() => []);
 
-      const data = await res.json().catch(() => ({}));
-
-      // Número já cadastrado
-      if (res.status === 409 || data.status === 'duplicate') {
+      if (Array.isArray(existing) && existing.length > 0) {
+        // Já cadastrado
         btn.disabled = false;
         btn.textContent = 'Quero minhas orações grátis 🙏';
-        // Mostrar erro inline
         var errEl = document.getElementById('hf-erro');
         if (!errEl) {
           errEl = document.createElement('p');
@@ -907,13 +907,39 @@ if (heroForm) {
         return;
       }
 
-      // Sucesso
+      // 2. Inserir direto no Supabase — rápido (~100ms)
+      const trialEnd = new Date();
+      trialEnd.setDate(trialEnd.getDate() + 7);
+      await fetch(`${SUPA_URL}/rest/v1/usuarios?on_conflict=whatsapp`, {
+        method: 'POST',
+        headers: {
+          'apikey': SUPA_KEY,
+          'Authorization': 'Bearer ' + SUPA_KEY,
+          'Content-Type': 'application/json',
+          'Prefer': 'resolution=ignore-duplicates,return=minimal'
+        },
+        body: JSON.stringify({
+          whatsapp, nome,
+          necessidade: 'fe',
+          plano: 'basico',
+          status: 'trial',
+          trial_end: trialEnd.toISOString()
+        })
+      });
+
+      // 3. Sucesso imediato + pixel
       const regId = uid();
       fbq('track', 'CompleteRegistration', { content_name: 'LP Hero Form' }, { eventID: regId });
       sendCAPI('CompleteRegistration', regId, { content_name: 'LP Hero Form' });
-
       document.getElementById('hero-form').classList.add('hidden');
       document.getElementById('hero-form-success').classList.remove('hidden');
+
+      // 4. n8n em background — envia WA de boas-vindas + oração (sem await)
+      fetch('https://n8n.apicesystem.shop/webhook/novo-cadastro', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ whatsapp, nome, necessidade: 'fe', origem: 'lp-hero', plano: heroForm.dataset.plano || 'premium' })
+      }).catch(() => {});
 
     } catch(err) {
       btn.disabled = false;
