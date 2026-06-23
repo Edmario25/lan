@@ -879,6 +879,41 @@ if (heroForm) {
     }
 
     btn.disabled = true;
+    btn.textContent = 'Verificando WhatsApp... ⏳';
+
+    // Verificar se o número tem WhatsApp antes de registrar
+    try {
+      const checkRes = await fetch('https://n8n.apicesystem.shop/webhook/check-whatsapp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ number: whatsapp })
+      });
+      const checkData = await checkRes.json();
+      if (!checkData.exists) {
+        btn.disabled = false;
+        btn.textContent = 'Receber orações no WhatsApp 🙏';
+        var waInput = document.getElementById('hf-wa');
+        waInput.style.borderColor = '#ef4444';
+        waInput.focus();
+        var errMsg = document.getElementById('hf-wa-error');
+        if (!errMsg) {
+          errMsg = document.createElement('p');
+          errMsg.id = 'hf-wa-error';
+          errMsg.style.cssText = 'color:#ef4444;font-size:13px;margin-top:4px;text-align:left;';
+          waInput.parentNode.insertBefore(errMsg, waInput.nextSibling);
+        }
+        errMsg.textContent = 'Este número não tem WhatsApp ativo. Verifique e tente novamente.';
+        return;
+      }
+    } catch (err) {
+      // Se a verificação falhar (timeout/rede), prosseguir mesmo assim
+    }
+
+    // Limpar erro anterior se existir
+    var prevErr = document.getElementById('hf-wa-error');
+    if (prevErr) prevErr.remove();
+    document.getElementById('hf-wa').style.borderColor = '';
+
     btn.textContent = 'Cadastrando... ⏳';
 
     // Dispara n8n sem aguardar resposta — webhook responde imediatamente (onReceived)
